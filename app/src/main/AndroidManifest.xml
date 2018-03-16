@@ -1,0 +1,296 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="apps.lnsel.com.ambujasales">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="apps.lnsel.com.salesapp.permission.MAPS_RECEIVE" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:name="apps.lnsel.com.ambujasales.helpers.VolleyLibrary.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.SplashScreen.SplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.LoginScreen.LoginActivity"
+            android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:noHistory="false"/>
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:noHistory="false"/>
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.AttendanceScreen.AttendanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingsScreen.MeetingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.TodosScreen.TodosActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ExpensesScreen.ExpensesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.LeaveRequestScreen.LeaveRequestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.CustomersScreen.CustomersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingDetailsScreen.MeetingDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ExpenseAddScreen.ExpenseAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingPictureScreen.MeetingPictureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingSignatureScreen.MeetingSignatureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ExpenseEditScreen.ExpenseEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingAddScreen.MeetingAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.CustomerDetailsScreen.CustomerDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.CustomerAddScreen.CustomerAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.LeaveRequestAddScreen.LeaveRequestAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.AroundMeScreen.AroundMeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ContactsScreen.ContactsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.LeaveRequestEditScreen.LeaveRequestEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingOrderScreen.MeetingOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.OrdersScreen.OrdersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.OrderEditScreen.OrderEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingNearShopScreen.MeetingNearShopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.PerformanceScreen.PerformanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ContactAddScreen.ContactAddActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ContactEditScreen.ContactEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.PerformanceSelectionScreen.PerformanceSelectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.MeetingExpenseScreen.MeetingExpenseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <activity
+            android:name="apps.lnsel.com.ambujasales.views.Dashboard.activities.ChangePasswordScreen.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/NoActionBarTheme"
+            android:noHistory="false"
+            />
+
+        <service android:name="apps.lnsel.com.ambujasales.helpers.Service.LocationService"/>
+
+<!--
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBypOtpZWlq-WQ4Q-W_lss58WQeCfNRwdI" />-->
+<!--
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDWltIIynLYM0M3u70TxQlCv3QLRXsi8LA" />-->
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAIKWB1aFZqZ5gl6Vkxj5I5-bmnOUAZ-l0" />
+
+        <!-- Firebase Notifications -->
+        <service android:name=".notification.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+    </application>
+
+</manifest>
